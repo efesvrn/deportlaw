@@ -2,6 +2,39 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.deportlawturkiye.com"
+        }
+      ],
+      "destination": "https://deportlawturkiye.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.deportlawturkey.com"
+        }
+      ],
+      "destination": "https://deportlawturkiye.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "deportlawturkey.com"
+        }
+      ],
+      "destination": "https://deportlawturkiye.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/en",
       "destination": "/",
       "permanent": true

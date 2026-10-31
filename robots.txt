@@ -31,4 +31,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://deportlawturkey.com/sitemap.xml
+Sitemap: https://deportlawturkiye.com/sitemap.xml

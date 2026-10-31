@@ -1,4 +1,4 @@
-# Deport Law Turkey
+# Deport Law Turkiye
 
 Statik web sitesi. Derleme adımı yok, kurulum yok — dosyalar olduğu gibi yayınlanır.
 
@@ -39,8 +39,13 @@ vercel.json         yönlendirmeler, önbellek ve güvenlik başlıkları
 2. vercel.com → **Add New → Project** → repoyu seçin.
 3. Framework Preset: **Other**. Build Command ve Output Directory **boş** kalsın.
 4. **Deploy**.
-5. Proje → **Settings → Domains** → `deportlawturkey.com` ekleyin ve Vercel'in verdiği
+5. Proje → **Settings → Domains** → `deportlawturkiye.com` ekleyin ve Vercel'in verdiği
    DNS kayıtlarını alan adı sağlayıcınıza girin.
+
+## Alan adı geçişi
+
+Ana alan adı `deportlawturkiye.com`. Eski `deportlawturkey.com` adresi de Vercel'de aynı projeye
+eklenirse, `vercel.json` içindeki yönlendirme o adrese gelen herkesi otomatik olarak yeni adrese gönderir.
 
 ## Yayından sonra
 
