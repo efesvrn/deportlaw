@@ -1,0 +1,20 @@
+{
+ "name": "Deport Law Turkiye",
+ "short_name": "Deport Law",
+ "start_url": "/",
+ "display": "browser",
+ "background_color": "#ffffff",
+ "theme_color": "#1a2b47",
+ "icons": [
+  {
+   "src": "/apple-touch-icon.png",
+   "sizes": "180x180",
+   "type": "image/png"
+  },
+  {
+   "src": "/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}
