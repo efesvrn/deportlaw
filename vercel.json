@@ -6,10 +6,21 @@
       "has": [
         {
           "type": "host",
+          "value": "www.deportlawturkiye.com"
+        }
+      ],
+      "destination": "https://deportlawturkiye.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
           "value": "www.deportlawturkey.com"
         }
       ],
-      "destination": "https://www.deportlawturkiye.com/:path*",
+      "destination": "https://deportlawturkiye.com/:path*",
       "permanent": true
     },
     {
@@ -20,7 +31,7 @@
           "value": "deportlawturkey.com"
         }
       ],
-      "destination": "https://www.deportlawturkiye.com/:path*",
+      "destination": "https://deportlawturkiye.com/:path*",
       "permanent": true
     },
     {
@@ -36,38 +47,11 @@
   ],
   "headers": [
     {
-      "source": "/assets/h/(.*)",
+      "source": "/assets/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
           "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/assets/(og\\.jpg|logo\\.png|landmarks\\.json)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400"
-        }
-      ]
-    },
-    {
-      "source": "/(favicon-32\\.png|apple-touch-icon\\.png|icon-512\\.png|site\\.webmanifest)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=604800"
-        }
-      ]
-    },
-    {
-      "source": "/(llms\\.txt|robots\\.txt|sitemap\\.xml)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600"
         }
       ]
     },
