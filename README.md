@@ -27,7 +27,7 @@ tarayıcıları JavaScript çalıştırmadan tüm içeriği okuyabilir.
 index.html          İngilizce (ana sayfa)
 tr/ ru/ ar/ uz/ tk/ az/ ky/ kk/ dari/ fa/
 assets/             logo, avukat fotoğrafları, paylaşım görseli
-assets/fonts/       yazı tipleri (Source Serif 4, Golos Text, Vazirmatn; OFL lisanslı, siteyle birlikte barındırılır)
+assets/fonts/       yazı tipleri (Source Serif 4, Onest, Vazirmatn; OFL lisanslı, siteyle birlikte barındırılır)
 robots.txt          arama motoru ve yapay zekâ tarayıcı izinleri
 sitemap.xml         11 sayfa + hreflang
 vercel.json         yönlendirmeler, önbellek ve güvenlik başlıkları
