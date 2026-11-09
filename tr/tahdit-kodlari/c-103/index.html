@@ -33,7 +33,113 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="/assets/codes.css">
+<style>
+@font-face { font-family: "Source Serif 4"; font-style: normal; font-weight: 200 900; font-display: swap; src: url("/assets/fonts/source-serif-4-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Source Serif 4"; font-style: normal; font-weight: 200 900; font-display: swap; src: url("/assets/fonts/source-serif-4-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Source Serif 4"; font-style: normal; font-weight: 200 900; font-display: swap; src: url("/assets/fonts/source-serif-4-cyrillic.woff2") format("woff2"); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: "Source Serif 4"; font-style: normal; font-weight: 200 900; font-display: swap; src: url("/assets/fonts/source-serif-4-cyrillic-ext.woff2") format("woff2"); unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+@font-face { font-family: "Onest"; font-style: normal; font-weight: 100 900; font-display: swap; src: url("/assets/fonts/onest-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Onest"; font-style: normal; font-weight: 100 900; font-display: swap; src: url("/assets/fonts/onest-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Onest"; font-style: normal; font-weight: 100 900; font-display: swap; src: url("/assets/fonts/onest-cyrillic.woff2") format("woff2"); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: "Onest"; font-style: normal; font-weight: 100 900; font-display: swap; src: url("/assets/fonts/onest-cyrillic-ext.woff2") format("woff2"); unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+@font-face { font-family: "Vazirmatn"; font-style: normal; font-weight: 100 900; font-display: swap; src: url("/assets/fonts/vazirmatn-arabic.woff2") format("woff2"); unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC; }
+@font-face { font-family: "Vazirmatn"; font-style: normal; font-weight: 100 900; font-display: swap; src: url("/assets/fonts/vazirmatn-latin.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Vazirmatn"; font-style: normal; font-weight: 100 900; font-display: swap; src: url("/assets/fonts/vazirmatn-latin-ext.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+/* Restriction-code pages. Same tokens, type and colours as the home pages. */
+:root{--paper:oklch(98.4% 0.005 260);--paper-2:oklch(96.1% 0.009 260);--ink:oklch(28.9% 0.056 260);--ink-2:oklch(38.5% 0.04 260);--muted:oklch(50% 0.03 260);--rule:oklch(89.5% 0.012 260);--accent:oklch(42.2% 0.143 18.8);--seal:oklch(96.4% 0.015 15);--seal-rule:oklch(88% 0.035 15);--action:oklch(50% 0.13 150);--action-2:oklch(44% 0.12 150);--field:oklch(28.9% 0.056 260);--field-ink:oklch(97% 0.006 260);--field-ink-2:oklch(84% 0.025 260);--focus:oklch(46% 0.19 20);--display:"Source Serif 4",ui-serif,Georgia,serif;--body:"Onest",ui-sans-serif,system-ui,sans-serif;--measure:44rem}
+:root[dir="rtl"]{--display:"Vazirmatn","Onest",ui-sans-serif,sans-serif;--body:"Vazirmatn","Onest",ui-sans-serif,sans-serif}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:88px}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--body);-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:inherit;text-underline-offset:.18em;text-decoration-thickness:1px}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.015em;line-height:1.15;margin:0;color:var(--ink);text-wrap:balance}
+:root[dir="rtl"] h1,:root[dir="rtl"] h2,:root[dir="rtl"] h3{letter-spacing:0;line-height:1.45}
+h1{font-size:clamp(2rem,3vw + 1rem,3.25rem);max-width:22ch}
+h2{font-size:clamp(1.375rem,1vw + 1rem,1.75rem);margin-top:3rem}
+h3{font-size:1.125rem;margin-top:1.75rem}
+p{margin:.75rem 0 0;max-width:var(--measure);text-wrap:pretty}
+.wrap{max-width:72rem;margin:0 auto;padding:0 clamp(1rem,4vw,3rem)}
+.skip{position:absolute;inset-inline-start:.5rem;top:-4rem;padding:.75rem 1rem;background:var(--ink);color:var(--paper);border-radius:6px;z-index:9}
+.skip:focus{top:.5rem}
+header.bar{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule)}
+header.bar .wrap{display:flex;align-items:center;gap:1rem;min-height:68px}
+.brand{display:flex;align-items:center;gap:.625rem;text-decoration:none;font:600 1.125rem/1.1 var(--display);white-space:nowrap}
+.brand img{height:36px;width:auto}
+.brand small{display:block;font:400 .75rem/1.2 var(--body);color:var(--muted);margin-top:2px}
+.bar-end{margin-inline-start:auto;display:flex;align-items:center;gap:.5rem}
+details.langs{position:relative}
+details.langs summary{list-style:none;cursor:pointer;display:flex;align-items:center;min-height:44px;padding:0 .75rem;border:1px solid var(--rule);border-radius:6px;font-size:.875rem;color:var(--ink-2)}
+details.langs summary::-webkit-details-marker{display:none}
+details.langs ul{position:absolute;inset-inline-end:0;top:calc(100% + .375rem);margin:0;padding:.375rem;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:2px;width:18rem;background:var(--paper);border:1px solid var(--rule);border-radius:6px;box-shadow:0 2px 6px oklch(20% .01 260 / .12)}
+details.langs a{display:flex;align-items:center;min-height:40px;padding:0 .625rem;border-radius:6px;font-size:.875rem;text-decoration:none;color:var(--ink-2)}
+details.langs a:hover{background:var(--paper-2)}
+details.langs a[aria-current="page"]{color:var(--accent);font-weight:600;background:var(--seal)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 1.125rem;border-radius:6px;border:1px solid var(--ink);font-weight:600;font-size:.9375rem;text-decoration:none;white-space:nowrap}
+.btn.wa{background:var(--action);border-color:var(--action);color:var(--paper)}
+.btn.wa:hover{background:var(--action-2);border-color:var(--action-2)}
+.crumbs{margin-top:1.75rem;font-size:.875rem;color:var(--muted)}
+.crumbs ol{display:flex;flex-wrap:wrap;gap:.375rem;margin:0;padding:0;list-style:none}
+.crumbs li+li::before{content:"/";margin-inline-end:.375rem;color:var(--rule)}
+.crumbs a{text-decoration:none}.crumbs a:hover{text-decoration:underline}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 17rem;gap:clamp(2rem,5vw,4.5rem);padding-bottom:4rem}
+article{min-width:0}
+.kicker{display:inline-block;margin-top:1.5rem;padding:.25rem .625rem;border:1px solid var(--seal-rule);background:var(--seal);color:var(--accent);border-radius:4px;font:600 .875rem/1.4 var(--body);direction:ltr;unicode-bidi:isolate}
+h1{margin-top:.875rem}
+.lead{font-size:1.1875rem;line-height:1.55;color:var(--ink-2)}
+.facts{margin:2rem 0 0;border-top:1px solid var(--rule);max-width:var(--measure)}
+.facts div{display:grid;grid-template-columns:12rem minmax(0,1fr);gap:1rem;padding:.75rem 0;border-bottom:1px solid var(--rule)}
+.facts dt{color:var(--muted);font-size:.9375rem}
+.facts dd{margin:0;font-weight:500}
+.ltr{direction:ltr;unicode-bidi:isolate}
+:root[dir="rtl"] .ltr{text-align:right}
+table.ov{margin-top:1rem;border-collapse:collapse;width:100%;max-width:var(--measure);font-size:.9375rem}
+table.ov th,table.ov td{text-align:start;padding:.625rem .5rem;border-bottom:1px solid var(--rule)}
+table.ov th{color:var(--muted);font-weight:500}
+table.ov tr.me td{background:var(--seal);font-weight:600}
+.note{margin-top:1.25rem;padding:1rem 1.125rem;border-inline-start:3px solid var(--accent);background:var(--paper-2);max-width:var(--measure)}
+.note p:first-child{margin-top:0}
+.faq h3{margin-top:1.5rem}
+.rail{position:sticky;top:96px;align-self:start;margin-top:2rem;font-size:.9375rem}
+.rail h2{font-size:1rem;margin:0 0 .5rem;font-family:var(--body);letter-spacing:0}
+.rail ul{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.rail li{border-bottom:1px solid var(--rule)}
+.rail a{display:flex;gap:.625rem;align-items:baseline;padding:.5rem 0;text-decoration:none;color:var(--ink-2)}
+.rail a:hover{color:var(--accent)}
+.rail a b{font-weight:600;color:var(--ink);min-width:3.75rem;direction:ltr;unicode-bidi:isolate}
+.rail .all{display:inline-block;margin-top:.875rem;color:var(--accent);font-weight:600}
+.cta{margin-top:3rem;padding:1.75rem;background:var(--field);color:var(--field-ink);border-radius:4px;max-width:var(--measure)}
+.cta h2{color:var(--field-ink);margin:0}
+.cta p{color:var(--field-ink-2)}
+.cta .row{display:flex;flex-wrap:wrap;gap:.625rem;margin-top:1.25rem}
+.cta .btn:not(.wa){border-color:var(--field-ink-2);color:var(--field-ink)}
+.cta .btn:not(.wa):hover{background:var(--field-2,oklch(34% .06 260))}
+.hub-group{margin-top:2.5rem}
+.hub-group h2{margin-top:0}
+.hub-group>p{color:var(--ink-2)}
+.hub-list{list-style:none;margin:1rem 0 0;padding:0;border-top:1px solid var(--rule)}
+.hub-list li{border-bottom:1px solid var(--rule)}
+.hub-list a{display:grid;grid-template-columns:5rem minmax(0,1fr) auto;gap:1rem;align-items:baseline;padding:.875rem 0;text-decoration:none}
+.hub-list a:hover .t{color:var(--accent);text-decoration:underline}
+.hub-list b{font-weight:600;direction:ltr;unicode-bidi:isolate}
+.hub-list .d{color:var(--muted);font-size:.875rem;text-align:end}
+footer{border-top:1px solid var(--rule);padding:2.5rem 0 6rem;color:var(--muted);font-size:.875rem}
+footer p{max-width:60rem}
+footer .row{display:flex;flex-wrap:wrap;gap:1rem 2rem;margin-top:1rem}
+footer a{color:var(--ink-2)}
+.mobilebar{display:none}
+@media (max-width:900px){.layout{grid-template-columns:minmax(0,1fr)}.rail{position:static}}
+@media (max-width:640px){
+ header.bar .btn.wa{display:none}.brand small{display:none}
+ .facts div{grid-template-columns:minmax(0,1fr);gap:.125rem}
+ .hub-list a{grid-template-columns:4.25rem minmax(0,1fr)}.hub-list .d{grid-column:2;text-align:start}
+ .mobilebar{display:flex;gap:.5rem;position:fixed;inset:auto 0 0 0;padding:.625rem 1rem calc(.625rem + env(safe-area-inset-bottom));background:var(--paper);border-top:1px solid var(--rule);z-index:6}
+ .mobilebar .btn{flex:1}
+ details.langs ul{width:min(18rem,calc(100vw - 2rem))}
+}
+@media (max-width:360px){.brand span{font-size:1rem}}
+
+</style>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -150,7 +256,7 @@
 <body>
 <a class="skip" href="#main">İçeriğe geç</a>
 <header class="bar"><div class="wrap">
-<a class="brand" href="/tr/"><img src="/assets/logo.png" alt="Deport Law Turkiye" width="45" height="36"><span>Deport Law Turkiye<small>ANKARA · TÜRKİYE</small></span></a>
+<a class="brand" href="/tr/"><img src="data:image/png;base64,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" alt="Deport Law Turkiye" width="45" height="36"><span>Deport Law Turkiye<small>ANKARA · TÜRKİYE</small></span></a>
 <div class="bar-end">
 <details class="langs"><summary aria-label="Dil">Türkçe</summary><ul><li><a href="/entry-ban-codes/c-103/" hreflang="en" lang="en" dir="ltr">English</a></li><li><a href="/tr/tahdit-kodlari/c-103/" hreflang="tr" lang="tr" dir="ltr" aria-current="page">Türkçe</a></li><li><a href="/ru/kody-zapreta/c-103/" hreflang="ru" lang="ru" dir="ltr">Русский</a></li><li><a href="/ar/rumuz-al-hazr/c-103/" hreflang="ar" lang="ar" dir="rtl">العربية</a></li><li><a href="/uz/cheklov-kodlari/c-103/" hreflang="uz" lang="uz" dir="ltr">Oʻzbekcha</a></li><li><a href="/tk/caklendiris-kodlary/c-103/" hreflang="tk" lang="tk" dir="ltr">Türkmençe</a></li><li><a href="/az/mehdudiyyet-kodlari/c-103/" hreflang="az" lang="az" dir="ltr">Azərbaycanca</a></li><li><a href="/ky/chektoo-koddoru/c-103/" hreflang="ky" lang="ky" dir="ltr">Кыргызча</a></li><li><a href="/kk/shekteu-kodtary/c-103/" hreflang="kk" lang="kk" dir="ltr">Қазақша</a></li><li><a href="/dari/kod-mamnooiyat/c-103/" hreflang="fa-AF" lang="fa-AF" dir="rtl">دری</a></li><li><a href="/fa/kod-mamnooiyat/c-103/" hreflang="fa" lang="fa" dir="rtl">فارسی</a></li></ul></details>
 <a class="btn wa" href="https://wa.me/905525244226?text=Merhaba%2C%20T%C3%BCrkiye%27de%20ikamet%20ve%20s%C4%B1n%C4%B1r%20d%C4%B1%C5%9F%C4%B1%20konusunda%20hukuki%20deste%C4%9Fe%20ihtiyac%C4%B1m%20var." rel="noopener" target="_blank">WhatsApp</a>
