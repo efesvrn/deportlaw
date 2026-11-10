@@ -79,17 +79,17 @@ Note: the information on this site is general and is not legal advice for a spec
 ## Restriction codes (tahdit kodları): one page per code
 Each page states what the code means, the period usually applied, the legal basis and the legal routes. Available in 11 languages.
 
-- [English · Restriction codes and entry bans in Turkiye](https://deportlawturkiye.com/entry-ban-codes/)
-- [Türkçe · Tahdit kodları ve giriş yasakları](https://deportlawturkiye.com/tr/tahdit-kodlari/)
-- [Русский · Ограничительные коды и запреты на въезд в Турцию](https://deportlawturkiye.com/ru/kody-zapreta/)
-- [العربية · أكواد التقييد وحظر الدخول في تركيا](https://deportlawturkiye.com/ar/rumuz-al-hazr/)
-- [Oʻzbekcha · Turkiyada cheklov kodlari va kirish taqiqlari](https://deportlawturkiye.com/uz/cheklov-kodlari/)
-- [Türkmençe · Türkiýede çäklendiriş kodlary we giriş gadaganlyklary](https://deportlawturkiye.com/tk/caklendiris-kodlary/)
-- [Azərbaycanca · Türkiyədə məhdudiyyət kodları və giriş qadağaları](https://deportlawturkiye.com/az/mehdudiyyet-kodlari/)
-- [Кыргызча · Түркиядагы чектөө коддору жана кирүүгө тыюулар](https://deportlawturkiye.com/ky/chektoo-koddoru/)
-- [Қазақша · Түркиядағы шектеу кодтары және кіруге тыйымдар](https://deportlawturkiye.com/kk/shekteu-kodtary/)
-- [دری · کودهای محدودیت و منع ورود در ترکیه](https://deportlawturkiye.com/dari/kod-mamnooiyat/)
-- [فارسی · کدهای محدودیت و ممنوعیت ورود در ترکیه](https://deportlawturkiye.com/fa/kod-mamnooiyat/)
+- [English: Restriction codes and entry bans in Turkiye](https://deportlawturkiye.com/entry-ban-codes/)
+- [Türkçe: Tahdit kodları ve giriş yasakları](https://deportlawturkiye.com/tr/tahdit-kodlari/)
+- [Русский: Ограничительные коды и запреты на въезд в Турцию](https://deportlawturkiye.com/ru/kody-zapreta/)
+- [العربية: أكواد التقييد وحظر الدخول في تركيا](https://deportlawturkiye.com/ar/rumuz-al-hazr/)
+- [Oʻzbekcha: Turkiyada cheklov kodlari va kirish taqiqlari](https://deportlawturkiye.com/uz/cheklov-kodlari/)
+- [Türkmençe: Türkiýede çäklendiriş kodlary we giriş gadaganlyklary](https://deportlawturkiye.com/tk/caklendiris-kodlary/)
+- [Azərbaycanca: Türkiyədə məhdudiyyət kodları və giriş qadağaları](https://deportlawturkiye.com/az/mehdudiyyet-kodlari/)
+- [Кыргызча: Түркиядагы чектөө коддору жана кирүүгө тыюулар](https://deportlawturkiye.com/ky/chektoo-koddoru/)
+- [Қазақша: Түркиядағы шектеу кодтары және кіруге тыйымдар](https://deportlawturkiye.com/kk/shekteu-kodtary/)
+- [دری: کودهای محدودیت و منع ورود در ترکیه](https://deportlawturkiye.com/dari/kod-mamnooiyat/)
+- [فارسی: کدهای محدودیت و ممنوعیت ورود در ترکیه](https://deportlawturkiye.com/fa/kod-mamnooiyat/)
 
 - [Ç-101: Overstay Entry Ban (3 months)](https://deportlawturkiye.com/entry-ban-codes/c-101/)
 - [Ç-102: Overstay Entry Ban (6 months)](https://deportlawturkiye.com/entry-ban-codes/c-102/)
