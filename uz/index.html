@@ -431,6 +431,17 @@ footer .flink:hover { color: var(--color-accent); }
 @media (prefers-reduced-motion: reduce) {
   *:not(.keep-motion), *:not(.keep-motion)::before, *:not(.keep-motion)::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
+
+/* the header link to the code pages makes this language's menu longer; it folds into the menu button below this width */
+@media (max-width: 1313px) {
+  .nav { position: absolute; top: var(--nav-h); inset-inline: 0; display: none; flex-direction: column; align-items: stretch; gap: 0; margin: 0; padding: var(--space-sm) var(--gutter) var(--space-lg); background: var(--color-paper); border-bottom: var(--rule-hair) solid var(--color-rule); }
+  .nav.open { display: flex; }
+  .nav a:not(.btn) { min-height: 52px; border-bottom: var(--rule-hair) solid var(--color-rule); font-size: var(--text-md); }
+  .nav .btn.wa { margin-top: var(--space-md); }
+  .menu-toggle { display: block; }
+  .hdr-actions { margin-inline-start: auto; }
+  .topbar .container { position: relative; }
+}
 </style>
 </head>
 <body>
@@ -449,6 +460,7 @@ footer .flink:hover { color: var(--color-accent); }
 <a data-i18n="navTeam" href="#team">Advokatlarimiz</a>
 <a data-i18n="navCommunity" href="#community">Hamjamiyat</a>
 <a data-i18n="navFaq" href="#faq">Savollar</a>
+<a href="/uz/cheklov-kodlari/">Cheklov kodlari</a>
 <a class="btn wa" data-i18n="navWa" href="https://wa.me/905525244226?text=Assalomu%20alaykum%2C%20Turkiyada%20yashash%20ruxsatnomasi%20yoki%20deportatsiya%20bo%CA%BByicha%20huquqiy%20yordamga%20muhtojman." rel="noopener" target="_blank">WhatsApp</a>
 </nav>
 <div class="hdr-actions">
