@@ -442,6 +442,49 @@ footer .flink:hover { color: var(--color-accent); }
   .hdr-actions { margin-inline-start: auto; }
   .topbar .container { position: relative; }
 }
+
+/* trust: verify our lawyers, scam warning, legal time limits, response hours */
+.step .when { display: flex; gap: var(--space-xs); margin-top: var(--space-2xs); padding-top: var(--space-sm); border-top: var(--rule-hair) dashed var(--color-rule); font-size: var(--text-sm); line-height: 1.45; color: var(--color-ink); }
+.step .when svg { flex: 0 0 16px; width: 16px; height: 16px; margin-top: 2px; color: var(--color-accent); }
+.limits { margin-top: var(--space-2xl); }
+.limits h3 { font-size: var(--text-xl); margin-bottom: var(--space-sm); }
+.limits-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: var(--space-2xl); margin: 0; }
+.lim { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: var(--space-2xs) var(--space-lg); padding-block: var(--space-md); border-top: var(--rule-hair) solid var(--color-rule); }
+.lim dt { color: var(--color-ink); font-weight: var(--body-strong); line-height: 1.4; }
+.lim dd { display: contents; }
+.lim dd b { grid-column: 2; grid-row: 1; font: var(--display-weight) var(--text-xl)/1.1 var(--font-display); font-variant-numeric: tabular-nums lining-nums; color: var(--color-accent); white-space: nowrap; }
+.lim dd span { grid-column: 1 / -1; font-size: var(--text-sm); line-height: 1.45; color: var(--color-muted); }
+.vf-steps { list-style: none; margin: 0; padding: 0; }
+.vf { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--space-lg); padding-block: var(--space-xl); border-top: var(--rule-hair) solid var(--color-rule); }
+.vf-n { min-width: 1.2em; font: var(--display-weight) var(--text-3xl)/1 var(--font-display); font-variant-numeric: lining-nums; color: var(--color-accent); }
+.vf p { margin-top: var(--space-xs); max-width: 60ch; color: var(--color-ink-2); }
+.vf-links { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-lg); }
+.vf-links .btn { white-space: normal; }
+.vf-links .btn svg { width: 16px; height: 16px; }
+:root[dir="rtl"] .vf-links .btn svg { transform: scaleX(-1); }
+.vf-names { display: flex; flex-wrap: wrap; gap: var(--space-xs); list-style: none; margin: var(--space-md) 0 0; padding: 0; }
+:root[dir="rtl"] .vf-names { justify-content: flex-end; }
+.vf-names li { padding: var(--space-2xs) var(--space-sm); border: var(--rule-hair) solid var(--color-rule); border-radius: var(--radius-input); background: var(--color-paper-2); font-weight: var(--body-strong); color: var(--color-ink); user-select: all; }
+.vf-note { margin-top: var(--space-md); padding: var(--space-md) var(--space-lg); border-inline-start: 3px solid var(--color-accent); background: var(--color-seal-paper); color: var(--color-ink); font-weight: var(--body-strong); }
+.scam-cols { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-2xl); align-items: start; }
+.scam-cols h3 { font-size: var(--text-xl); }
+.scam-good { padding: var(--space-xl); background: var(--color-paper-2); border-radius: var(--radius-card); }
+.scam-list { list-style: none; margin: var(--space-md) 0 0; padding: 0; }
+.scam-list li { display: flex; gap: var(--space-sm); padding-block: var(--space-md); border-top: var(--rule-hair) solid var(--color-rule); color: var(--color-ink-2); }
+.scam-list li b { color: var(--color-ink); }
+.scam-list svg { flex: 0 0 20px; width: 20px; height: 20px; margin-top: var(--space-3xs); color: var(--color-accent); }
+.scam-list.good svg { color: var(--color-action); }
+.cta-hours { display: flex; gap: var(--space-xs); margin-top: var(--space-md); font-size: var(--text-sm); line-height: 1.5; color: var(--color-field-ink-2); max-width: 52ch; }
+.cta-hours svg { flex: 0 0 16px; width: 16px; height: 16px; margin-top: 3px; }
+@media (max-width: 60rem) {
+  .scam-cols { grid-template-columns: minmax(0, 1fr); gap: var(--space-xl); }
+  .limits-list { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 40rem) {
+  .scam-good { padding: var(--space-lg); }
+  .vf { gap: var(--space-md); padding-block: var(--space-lg); }
+  .vf-n { font-size: var(--text-2xl); }
+}
 </style>
 </head>
 <body>
@@ -536,6 +579,8 @@ footer .flink:hover { color: var(--color-accent); }
 <a data-i18n="prEyebrow" href="#process">Necə başlamalı</a>
 <a data-i18n="whyEyebrow" href="#why">Niyə biz</a>
 <a data-i18n="teamEyebrow" href="#team">Vəkillərimiz</a>
+<a data-i18n="verifyEyebrow" href="#verify">Vəkillərimizi yoxlayın</a>
+<a data-i18n="scamEyebrow" href="#scams">Fırıldaqçılardan qorunun</a>
 <a data-i18n="rgEyebrow" href="#rights">Hüquqlarınızı bilin</a>
 <a data-i18n="feeEyebrow" href="#fees">Xərc və ödənişlər</a>
 <a data-i18n="cmEyebrow" href="#community">İcma</a>
@@ -584,11 +629,23 @@ footer .flink:hover { color: var(--color-accent); }
 <p data-i18n="prDesc">Sənədləri göndərin. Vəziyyətinizi dəqiq deyək.</p>
 </div>
 <ol class="steps">
-<li class="step rv"><div class="n"><span data-i18n="prStep">ADDIM</span> 01</div><h3 data-i18n="p1t">Bizə yazın</h3><p data-i18n="p1d">WhatsApp-da öz dilinizdə yazın. Tez cavab veririk.</p></li>
-<li class="step rv"><div class="n"><span data-i18n="prStep">ADDIM</span> 02</div><h3 data-i18n="p2t">Sənədlərinizi göndərin</h3><p data-i18n="p2d">Qərarın, pasportunuzun və sənədlərinizin şəklini çəkib göndərin.</p></li>
-<li class="step rv"><div class="n"><span data-i18n="prStep">ADDIM</span> 03</div><h3 data-i18n="p3t">Strategiyanı qururuq</h3><p data-i18n="p3d">Aydın cavab alırsınız: müddətiniz, riskləriniz və ən güclü yolunuz.</p></li>
-<li class="step rv"><div class="n"><span data-i18n="prStep">ADDIM</span> 04</div><h3 data-i18n="p4t">Hərəkətə keçir və sizi təmsil edirik</h3><p data-i18n="p4d">İddianı qaldırır və qərar çıxanadək aparırıq.</p></li>
+<li class="step rv"><div class="n"><span data-i18n="prStep">ADDIM</span> 01</div><h3 data-i18n="p1t">Bizə yazın</h3><p data-i18n="p1d">WhatsApp-da öz dilinizdə yazın. Tez cavab veririk.</p><p class="when"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg><span data-i18n="pw1">İstənilən vaxt. Təcili işlər (deportasiya, saxlanma): 24/7, dərhal cavab veririk.</span></p></li>
+<li class="step rv"><div class="n"><span data-i18n="prStep">ADDIM</span> 02</div><h3 data-i18n="p2t">Sənədlərinizi göndərin</h3><p data-i18n="p2d">Qərarın, pasportunuzun və sənədlərinizin şəklini çəkib göndərin.</p><p class="when"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg><span data-i18n="pw2">Mümkün qədər tez: müddət işləməyə davam edir.</span></p></li>
+<li class="step rv"><div class="n"><span data-i18n="prStep">ADDIM</span> 03</div><h3 data-i18n="p3t">Strategiyanı qururuq</h3><p data-i18n="p3d">Aydın cavab alırsınız: müddətiniz, riskləriniz və ən güclü yolunuz.</p><p class="when"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg><span data-i18n="pw3">Sənədlərinizi oxuduqdan sonra.</span></p></li>
+<li class="step rv"><div class="n"><span data-i18n="prStep">ADDIM</span> 04</div><h3 data-i18n="p4t">Hərəkətə keçir və sizi təmsil edirik</h3><p data-i18n="p4d">İddianı qaldırır və qərar çıxanadək aparırıq.</p><p class="when"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg><span data-i18n="pw4">Qanuni müddət daxilində və qərar çıxana qədər.</span></p></li>
 </ol>
+<div class="limits rv">
+<h3 data-i18n="tlTitle">Bilməli olduğunuz müddətlər</h3>
+<dl class="limits-list">
+<div class="lim"><dt data-i18n="tl1l">Deportasiya qərarından şikayət</dt><dd><b data-i18n="tl1v">7 gün</b><span data-i18n="tl1s">bildiriş tarixindən · 6458 saylı Qanun, maddə 53</span></dd></div>
+<div class="lim"><dt data-i18n="tl2l">Bu şikayət üzrə məhkəmə qərarı</dt><dd><b data-i18n="tl2v">15 gün</b><span data-i18n="tl2s">məhkəmə bu müddətdə qərar verir · maddə 53</span></dd></div>
+<div class="lim"><dt data-i18n="tl3l">Geri Qaytarma Mərkəzində saxlanmaya etiraz</dt><dd><b data-i18n="tl3v">5 gün</b><span data-i18n="tl3s">Sülh Cinayət Hakimi bu müddətdə qərar verir · maddə 57</span></dd></div>
+<div class="lim"><dt data-i18n="tl4l">İnzibati nəzarətin maksimum müddəti</dt><dd><b data-i18n="tl4v">6 + 6 ay</b><span data-i18n="tl4s">6 ay, ən çox daha 6 ay uzadıla bilər · maddə 57</span></dd></div>
+<div class="lim"><dt data-i18n="tl5l">Ölkəni tərk etməyə dəvət</dt><dd><b data-i18n="tl5v">15–30 gün</b><span data-i18n="tl5s">könüllü çıxış üçün müddət · maddə 56</span></dd></div>
+<div class="lim"><dt data-i18n="tl6l">Rədd edilmiş və ya ləğv olunmuş icazəyə qarşı iddia</dt><dd><b data-i18n="tl6v">60 gün</b><span data-i18n="tl6s">bildiriş tarixindən · 2577 saylı Qanun, maddə 7</span></dd></div>
+</dl>
+</div>
+
 
 </section>
 <section class="why" id="why"><div class="why-cols"><div class="rv">
@@ -634,6 +691,50 @@ footer .flink:hover { color: var(--color-accent); }
 <a class="li-link" href="https://www.linkedin.com/in/efesavran" rel="noopener" target="_blank"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg><span data-i18n="viewLinkedin">LinkedIn</span></a>
 </div>
 </div>
+</div>
+
+</section>
+<section class="verify" id="verify">
+
+<div class="section-head rv">
+
+<h2 data-i18n="vfTitle">Vəkil olduğumuzu özünüz yoxlayın</h2>
+<p data-i18n="vfDesc">Sözümüzə inanmaq məcburiyyətində deyilsiniz. Bu səhifədəki hər vəkil Ankara Vəkillər Kollegiyasında qeydiyyatdadır. Bunu iki dəqiqəyə yoxlaya bilərsiniz.</p>
+</div>
+<ol class="vf-steps">
+<li class="vf rv"><span aria-hidden="true" class="vf-n">1</span><div><h3 data-i18n="vf1t">Kollegiyanın rəsmi saytını açın</h3><p data-i18n="vf1d">Ankara Vəkillər Kollegiyasının və ya Türkiyə Vəkillər Kollegiyaları İttifaqının saytına daxil olun və vəkil axtarışından (Avukat Arama) istifadə edin.</p>
+<div class="vf-links"><a class="btn" href="https://www.ankarabarosu.org.tr/" rel="noopener" target="_blank"><span data-i18n="vfB1">Ankara Vəkillər Kollegiyası</span><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"></path></svg></a><a class="btn ghost" href="https://www.barobirlik.org.tr/" rel="noopener" target="_blank"><span data-i18n="vfB2">Türkiyə Vəkillər Kollegiyaları İttifaqı</span><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"></path></svg></a></div></div></li>
+<li class="vf rv"><span aria-hidden="true" class="vf-n">2</span><div><h3 data-i18n="vf2t">Adlarımızı axtarın</h3><p data-i18n="vf2d">Hər adı burada yazıldığı kimi daxil edin:</p>
+<ul class="vf-names" dir="ltr" lang="tr"><li>Av. Hayri Efe Savran</li><li>Av. Eda Özuğur</li><li>Av. Ensar Özkan</li></ul></div></li>
+<li class="vf rv"><span aria-hidden="true" class="vf-n">3</span><div><h3 data-i18n="vf3t">Vəkil vəsiqəsini göstərməyi xahiş edin</h3><p data-i18n="vf3d">Türkiyədə hər vəkilin rəsmi vəkil vəsiqəsi var. Onu ofisdə və ya video zəngdə göstərməyimizi xahiş edin.</p></div></li>
+</ol>
+<p class="vf-note rv" data-i18n="vfNote">Bu siyahılarda tapılmayan şəxs vəkil deyil və sizi məhkəmədə təmsil edə bilməz.</p>
+
+</section>
+<section class="scam" id="scams">
+
+<div class="section-head rv">
+
+<h2 data-i18n="scTitle">Fırıldaqçını necə tanımalı</h2>
+<p data-i18n="scDesc">İcazə və ya deportasiya problemi olan insanlar “vasitəçilər” üçün asan hədəfdir. Xəbərdarlıq əlamətləri bunlardır.</p>
+</div>
+<div class="scam-cols">
+<div class="scam-bad rv"><h3 data-i18n="scBadT">Əgər şəxs bunları edirsə, ondan uzaq durun:</h3>
+<ul class="scam-list">
+<li><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg><span data-i18n-html="sc1"><b>Nəticəyə zəmanət verir.</b> Miqrasiya idarəsinin və ya məhkəmənin nə qərar verəcəyinə heç kim zəmanət verə bilməz.</span></li>
+<li><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg><span data-i18n-html="sc2"><b>İçəridə “tanışı” olduğunu deyir.</b> Tanışlıq üçün pul ödəmək cinayətdir və vəziyyətinizi pisləşdirə bilər.</span></li>
+<li><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg><span data-i18n-html="sc3"><b>Qeydiyyatlı vəkil deyil.</b> Agentliklər və məsləhətçilər sizi məhkəmədə təmsil edə bilməz.</span></li>
+<li><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg><span data-i18n-html="sc4"><b>Qəbzsiz nağd pul alır.</b> Vəkil hər ödəniş üçün rəsmi qəbz (serbest meslek makbuzu) verir.</span></li>
+<li><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg><span data-i18n-html="sc5"><b>Pasportunuzu saxlayır və ya boş vərəqə imza atdırır.</b> Orijinal sənədləri verməyin, oxuya bilmədiyiniz heç nəyə imza atmayın.</span></li>
+<li><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg><span data-i18n-html="sc6"><b>Sənədlərinizi oxumadan cavab verir.</b> Dürüst cavab qərarınızda nə yazıldığından asılıdır.</span></li>
+</ul></div>
+<div class="scam-good rv"><h3 data-i18n="scGoodT">Bizimlə nə əldə edirsiniz:</h3>
+<ul class="scam-list good">
+<li><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg><span data-i18n="sg1">Vasitəçi deyil, qeydiyyatını yoxlaya biləcəyiniz vəkil.</span></li>
+<li><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg><span data-i18n="sg2">Qiymətləndirmə yalnız sənədlərinizi oxuduqdan sonra, perspektiv zəif olsa belə.</span></li>
+<li><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg><span data-i18n="sg3">Yazılı müqavilə və hər ödəniş üçün rəsmi qəbz.</span></li>
+<li><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"></path></svg><span data-i18n="sg4">Nəticə barədə vəd yox, yalnız görəcəyimiz iş barədə.</span></li>
+</ul></div>
 </div>
 
 </section>
@@ -735,7 +836,7 @@ footer .flink:hover { color: var(--color-accent); }
 </section></div></div>
 
 <section class="cta">
-<div class="container"><div class="cta-text"><h2 data-i18n="ctaTitle">Bir gün belə itirməyin. İndi yazın.</h2><p data-i18n="ctaDesc">Vəziyyətinizi danışın, harada dayandığınızı dəqiq öyrənin. Öhdəlik yoxdur.</p></div><div class="cta-act"><div class="cta-actions">
+<div class="container"><div class="cta-text"><h2 data-i18n="ctaTitle">Bir gün belə itirməyin. İndi yazın.</h2><p data-i18n="ctaDesc">Vəziyyətinizi danışın, harada dayandığınızı dəqiq öyrənin. Öhdəlik yoxdur.</p><p class="cta-hours"><svg aria-hidden="true" fill="none" focusable="false" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg><span data-i18n="ctaHours">Təcili işlər (deportasiya, saxlanma): 24/7, dərhal cavab veririk. Digər suallar: iş saatlarında.</span></p></div><div class="cta-act"><div class="cta-actions">
 <a class="btn white wa" href="https://wa.me/905525244226?text=Salam%2C%20T%C3%BCrkiy%C9%99d%C9%99%20ya%C5%9Fay%C4%B1%C5%9F%20icaz%C9%99si%20v%C9%99%20ya%20deportasiya%20m%C3%B6vzusunda%20h%C3%BCquqi%20d%C9%99st%C9%99y%C9%99%20ehtiyac%C4%B1m%20var." rel="noopener" target="_blank">
 <svg aria-hidden="true" fill="currentColor" focusable="false" height="19" viewBox="0 0 24 24" width="19"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zM6.597 20.13c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 001.519 5.255l-.999 3.648 3.97-1.221z"></path></svg>
 <span data-i18n="ctaBtn">WhatsApp-da yazın</span>
