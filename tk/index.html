@@ -940,10 +940,11 @@ footer .flink:hover { color: var(--color-accent); }
 </div><div class="phonebox">
 <span class="pb-name" dir="ltr" lang="tr">Av. Hayri Efe Savran</span>
 <a href="tel:+905525244226">+90 552 524 42 26</a>
-<button class="copybtn" data-i18n="copyNum" id="copyBtn" type="button">Belgini göçür</button>
+<button class="copybtn" data-i18n="copyNum" data-num="+90 552 524 42 26" id="copyBtn" type="button">Belgini göçür</button>
 </div><div class="phonebox">
 <span class="pb-name" dir="ltr" lang="tr">Av. Ensar Özkan</span>
 <a href="tel:+905347930525">+90 534 793 05 25</a>
+<button class="copybtn" data-i18n="copyNum" data-num="+90 534 793 05 25" type="button">Belgini göçür</button>
 </div></div></div>
 </section>
 
@@ -1307,11 +1308,11 @@ document.getElementById("calcDate").addEventListener("change",runCalc);
 (function(){var t=new Date();document.getElementById("calcDate").max=t.getFullYear()+"-"+String(t.getMonth()+1).padStart(2,"0")+"-"+String(t.getDate()).padStart(2,"0");})();
 
 var toast=document.getElementById("toast");
-document.getElementById("copyBtn").onclick=function(){
-  var n="+90 552 524 42 26", done=function(){toast.textContent=CALC.copied;toast.classList.add("show");setTimeout(function(){toast.classList.remove("show");},1800);};
+document.querySelectorAll(".copybtn").forEach(function(btn){btn.onclick=function(){
+  var n=btn.getAttribute("data-num"), done=function(){toast.textContent=CALC.copied;toast.classList.add("show");setTimeout(function(){toast.classList.remove("show");},1800);};
   if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(n).then(done,function(){});}
   else{var ta=document.createElement("textarea");ta.value=n;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");done();}catch(e){}document.body.removeChild(ta);}
-};
+};});
 
 (function(){var els=document.querySelectorAll(".rv");
  if(!("IntersectionObserver" in window)){els.forEach(function(e){e.classList.add("in");});return;}
